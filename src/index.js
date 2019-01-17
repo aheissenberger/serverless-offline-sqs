@@ -124,7 +124,7 @@ class ServerlessOfflineSQS {
           md5OfBody,
           eventSource: 'aws:sqs',
           eventSourceARN: queueEvent.arn,
-          awsRegion: 'us-west-2'
+          awsRegion: this.options.region ||'us-west-2'
         })
       )
     };
